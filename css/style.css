@@ -18,6 +18,7 @@
 body{
     font-family: 'Graphik-Medium','Graphik-Regular', "Gotham SSm A", "Gotham SSm B", "Helvetica Neue", Helvetica, Arial, sans-serif;
     width: 100%;
+    padding: 56px 0 0 0;
 }
 
 nav {
@@ -27,6 +28,11 @@ nav {
 .menu{
     display: flex;
     flex-direction: row;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: white;
 }
 
 .menu-centro a{
@@ -172,4 +178,26 @@ nav {
     width: 270px;
     margin-top: 115px;
     margin-left: 70px;
+}
+
+.secundary-section {
+    background: rgb(47, 5, 73);
+    width: 100%;
+    height: 100vh;
+    color: white;
+    font-family: 'Graphik-Medium','Graphik-Regular', "Gotham SSm A", "Gotham SSm B", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.sec1 {
+    display: flex;
+    flex-direction: row;
+}
+
+.sec1 p {
+    color: rgb(153, 27, 236);
+    font-size: 40px;
+}
+
+.sec1-1 {
+    display: flex;
 }
