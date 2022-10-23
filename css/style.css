@@ -44,6 +44,7 @@ nav {
 .main-section{
     background-image:url(/img/nubank1.jpg);
     background-size: cover;
+    background-position: 0;
 }
 
 .container{
@@ -74,6 +75,12 @@ nav {
     text-decoration: none;
 }
 
+.login-btn:hover {
+    color: rgb(130, 10, 209);
+    text-decoration: underline;
+    transition: 1s;
+}
+
 .login-btn img{
     margin-left: 10px;
 }
@@ -88,6 +95,10 @@ nav {
 
 .titulo h1 {
     margin: 72px 0;
+}
+
+.subtitulo{
+    margin-top: 70px;
 }
 
 .subtitulo h3 {
@@ -107,8 +118,8 @@ nav {
 }
 
 .login-form {
-    width: 320px;
-    height: 320px;
+    width: 340px;
+    height: 300px;
     background-color: white;
     color: black;
     border-radius: 15px;
@@ -131,6 +142,7 @@ nav {
 
 .login-form input {
     margin-bottom: 70px;
+    font-family: 'Graphik-Regular';
 }
 
 .btn-logar {
@@ -145,4 +157,18 @@ nav {
 
 .btn-logar span{
     text-align: left;
+}
+
+.content {
+    display: flex;
+    flex-direction: row;
+    margin-top: 120px;
+}
+
+.formulario-login{
+    margin-left: 850px;
+}
+
+.nu-copa img{
+    width: 270px;
 }
