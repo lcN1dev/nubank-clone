@@ -52,6 +52,7 @@ nav {
     background-image:url(/img/nubank1.jpg);
     background-size: cover;
     background-position: 0;
+    width: 100%;
 }
 
 .container{
@@ -100,13 +101,13 @@ nav {
     font-family: 'Graphik-Medium';
     font-size: 35px;
     width: 500px;
-    margin-left: 55px;
+    margin-left: 5%;
     font-weight: 500;
 }
 
 .subtitulo p {
     font-family: 'Graphik-Regular';
-    margin-left: 55px;
+    margin-left: 5%;
     margin-top: 15px;
     font-size: 25px;
     width: 600px;
@@ -180,24 +181,60 @@ nav {
     margin-left: 70px;
 }
 
-.secundary-section {
+.second-section {
     background: rgb(47, 5, 73);
     width: 100%;
     height: 100vh;
     color: white;
-    font-family: 'Graphik-Medium','Graphik-Regular', "Gotham SSm A", "Gotham SSm B", "Helvetica Neue", Helvetica, Arial, sans-serif;
-}
-
-.sec1 {
+    font-family: 'Graphik-Regular', "Gotham SSm A", "Gotham SSm B", "Helvetica Neue", Helvetica, Arial, sans-serif;
     display: flex;
     flex-direction: row;
 }
 
-.sec1 p {
-    color: rgb(153, 27, 236);
-    font-size: 40px;
+.sec1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 5%;
+}
+
+.sec1-titulo {
+    font-size: 30px;
+    width: 700px;
+    margin-top: -500px;
 }
 
 .sec1-1 {
+    margin-top: 30px;
+}
+
+.sec1-1 h3 {
+    font-size: 35px;
+    width: 800px;
+    padding-top: 50px;
+}
+
+.sec1-1 p {
+    color: rgb(195, 62, 248);
+    margin-top: 50px;
+    font-size: 40px;
+    margin-right: 15px;
+}
+
+.sec1-1img  img{
+    margin-top: 100px;
+}
+
+.sec1-1txt {
     display: flex;
+    flex-direction: row;
+}
+
+.sec1-1txt img{
+    padding-right: 20px;
+    margin-top: 50px;
+}
+
+.sec1-1txt1 {
+    margin-top: 30px;
 }
