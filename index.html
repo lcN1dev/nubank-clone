@@ -41,9 +41,9 @@
                         <form class="login-form">
                             <h3>Seja cliente Nubank e participe:</h3>
                             <input type="tel" aria-required="true" aria-invalid="true" name="cpf" id="campo-cpf"
-                                placeholder="Digite seu CPF">
+                                placeholder="Digite seu CPF" autocomplete="off" maxlength="14">
                             <div class="btn-logar">
-                                <button type="submit" class="btn-logar"><span>Continuar</span></button>
+                                <button type="button" id="btn-logar" class="btn-logar"><span>Continuar</span></button>
                             </div>
                         </form>
                         <div class="nu-copa">
@@ -58,19 +58,59 @@
                 <div class="sec1-titulo">
                     <h2>Convidando amigos para o Nubank, vocês podem ganhar:</h2>
                 </div>
-                    <div class="sec1-1">
-                        <div class="sec1-1txt">
-                            <img src="/img/setanu.svg" alt=""><h3 class="sec1-1txt1">Viagem para o Catar 2022™ com tudo pago para ver 4 jogos e muito mais</h3>
-                        </div>
-                        <div class="sec1-1txt">
-                            <img src="/img/setanu.svg" alt=""><h3 class="sec1-1txt2">6 prêmios de R$6.000,00</h3>
-                        </div>
+                <div class="sec1-1">
+                    <div class="sec1-1txt">
+                        <img src="/img/setanu.svg" alt="">
+                        <h3 class="sec1-1txt1">Viagem para o Catar 2022™ com tudo pago para ver 4 jogos e muito mais
+                        </h3>
                     </div>
+                    <div class="sec1-1txt">
+                        <img src="/img/setanu.svg" alt="">
+                        <h3 class="sec1-1txt2">6 prêmios de R$6.000,00</h3>
+                    </div>
+                </div>
             </div>
             <div class="sec1-1img">
                 <img src="/img/nubank2.jpg" width="960px" alt="">
             </div>
         </section>
     </main>
+    <script src="/js/validaCPF.js"></script>
+    <script>
+        const input = document.getElementById('campo-cpf');
+
+        input.onkeyup = function () {
+            let inputLength = input.value.length
+            if (inputLength === 3 || inputLength === 7)
+                input.value += '.'
+            else if (inputLength == 11)
+                input.value += '-'
+        }
+    </script>
+    <script>
+        document.getElementById('campo-cpf').onfocus = function () {
+            var botao = document.getElementById('btn-logar');
+            var input = document.getElementById('campo-cpf');
+            botao.disabled = true;
+            let valida = validaCPF();
+            if (valida == false) {
+                botao.disabled = true;
+                botao.style.background = "rgba(17, 17, 17, 0.1);";
+                botao.style.color = "rgba(17, 17, 17, 0.2)";
+                botao.style.cursor = "not-allowed";
+                botao.setAttribute('type','button');
+                input.style.color = "rgb(215, 41, 35)";
+            } else {
+                botao.disabled = false;
+                botao.style.background = "rgb(130, 10, 209)";
+                botao.style.color = "white";
+                botao.style.cursor = "pointer";
+                botao.setAttribute('type','submit');
+                input.style.color = "rgb(31, 127, 69)";
+            }
+
+        }
+    </script>
 </body>
+
 </html>
